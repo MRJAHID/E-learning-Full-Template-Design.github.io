@@ -50,14 +50,14 @@
     width: 100%;
 
     .hero_search-input {
-      border: 1px solid #e3e5e6;
+      border: 1px solid $border-color;
       border-radius: 16px;
       box-shadow: 0 0 3px #c6c6c6;
       height: 44px;
       min-width: unset;
       text-overflow: ellipsis;
       background-color: #fff;
-      color: #384047;
+      color: $dark-text-2;
       display: flex;
       flex-wrap: wrap;
       position: relative;
@@ -91,7 +91,7 @@
     outline: 0;
     transition: background-color 50ms;
     color: #fff;
-    background-color: #3bb3bd;
+    background-color: $secondary-color;
     position: relative;
     min-height: 32px;
 
