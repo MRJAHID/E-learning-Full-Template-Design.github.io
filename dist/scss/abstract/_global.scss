@@ -66,6 +66,14 @@ textarea,
 select:focus {
   outline: none !important;
 }
+input:focus {
+  outline: none;
+}
+
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
 
 // section css
 
