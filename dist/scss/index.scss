@@ -17,12 +17,14 @@
 @import './pages/password-change';
 @import './pages/payment-history';
 @import './pages/payment-method';
+@import './pages/mylesson';
 
 // Components
-  @import './components/hero';
-  @import './components/language-section';
-  @import './components/whatis';
-  @import './components/speciality';
-  @import './components/whyus';
-  @import './components/faq';
-  @import './components/learning-section';
+@import './components/hero';
+@import './components/language-section';
+@import './components/whatis';
+@import './components/speciality';
+@import './components/whyus';
+@import './components/faq';
+@import './components/learning-section';
+@import 'components/subscription-banner';
