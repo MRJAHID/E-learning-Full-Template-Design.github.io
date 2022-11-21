@@ -1,9 +1,9 @@
 
 .find-teacher_header {
-  //margin-bottom: -200px;
-  padding: 40px 32px 40px;
+  padding: 12px;
 
-  .find-teacher_header-content {
+  @media screen and (min-width: 768px) {
+    padding: 40px 32px 40px;
   }
 
   &:after {
@@ -23,7 +23,12 @@
 
   .find-teacher_header-text_wrapper {
     display: flex;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    @media (min-width: 768px) {
+      & {
+        margin-bottom: 5rem;
+      }
+    }
 
     &:after {
       background-image: url(https://static.preply.com/static/ssr/_next/static/images/search-banner-people-9de9babdc48d6e76a89550e0e280033b.svg);
@@ -36,6 +41,9 @@
       margin-bottom: -148px;
       margin-top: -64px;
       width: 285px;
+      @media screen and (max-width: 767px) {
+        margin-top: -82px;
+      }
     }
   }
 
@@ -50,9 +58,14 @@
       text-transform: none;
       display: inline;
       color: #fff;
-      font-size: 40px;
+      font-size: 20px;
       font-weight: 400;
       margin-top: 12px;
+
+
+      @media screen and (min-width: 768px) {
+        font-size: 40px;
+      }
 
       span {
         color: $secondary-color !important;
@@ -62,8 +75,16 @@
 
     p {
       color: #e5e1e1;
-      margin-top: 8px;
+      margin-top: 6px;
       font-weight: 400;
+
+      @media screen and (max-width: 767px) {
+        white-space: nowrap;
+        margin-top: 8px;
+        width: 50vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
   }
@@ -80,14 +101,17 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
 
     .find-teacher_header_search {
       position: relative;
       border-radius: 1rem;
       background-color: #fff;
-      display: flex;
       max-width: 1216px;
       width: 100%;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
     }
 
     .find-teacher_header_search-one {
@@ -188,11 +212,14 @@
   .find-teacher_header_filter {
     margin: 8px 0;
     align-items: center;
-    display: flex;
     gap: 0 16px;
     max-width: 1216px;
     position: relative;
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
 
     .find-teacher_header_filter-left,
     .find-teacher_header_filter-right {
@@ -277,7 +304,6 @@
   .find-teacher_header_filter-right {
     margin-left: auto !important;
   }
-}
 
 
 .find-teacher-main {
@@ -315,9 +341,8 @@
   display: flex;
 
   @media screen and (max-width: 768px) {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 100px;
+    padding: 10px;
+    margin-top: 66px;
   }
 
 }
@@ -419,13 +444,20 @@
   white-space: nowrap;
 }
   &__name {
-    font-weight: 500;
-    font-size: 22px;
+
+    font-weight: 400;
+    font-size: 20px;
     color: $secondary-color;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (min-width: 768px) {
+      & {
+        font-weight: 500;
+        font-size: 22px;
+      }
+    }
     img {
       margin-left: 0.6rem;
       height: 100%;
@@ -455,26 +487,31 @@
     margin-top: 10px;
 
     &__item {
-      padding: 10px 35px;
-      min-width: 150px;
-
-      @media screen and (max-width: 768px) {
+      padding: 4px 15px;
+      @media screen and (min-width: 768px) {
         padding: 10px 20px;
         min-width: 120px;
       }
-
     }
 
     &__title {
-      font-weight: 500;
-      font-size: 27px;
+      font-weight: 400;
+      font-size: 20px;
       color: #324e63;
+      @media screen and (min-width: 768px) {
+        font-weight: 500;
+        font-size: 27px;
+      }
     }
 
     &__txt {
-      font-weight: 500;
+      font-weight: 400;
+      font-size: 14px;
       margin-top: 7px;
       color: $dark-text;
+      @media screen and (min-width: 768px) {
+        font-weight: 500;
+      }
     }
 
   }
@@ -485,9 +522,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
     margin-top: 20px;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (min-width: 576px) {
       flex-wrap: wrap;
     }
 
@@ -496,18 +534,24 @@
   &__button {
     background: none;
     border: none;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700;
-    font-size: 19px;
+    font-weight: 500;
+    font-size: 16px;
     margin: 10px 10px;
-    padding: 15px 40px;
-    //min-width: 201px;
+    padding: 15px 10px;
     border-radius: 50px;
     min-height: 55px;
     color: #fff;
     cursor: pointer;
     backface-visibility: hidden;
     transition: all .3s;
+
+    @media screen and (min-width: 768px) {
+      margin: 15px 25px;
+      font-weight: 700;
+      padding: 15px 40px;
+      font-size: 19px;
+    }
+
 
     @media screen and (max-width: 768px) {
       //min-width: 170px;
@@ -517,12 +561,16 @@
     @media screen and (max-width: 576px) {
       min-width: inherit;
       margin: 0;
-      margin-bottom: 16px;
+
       width: 100%;
       max-width: 300px;
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 576px) {
+        margin-bottom: 16px;
       }
     }
 

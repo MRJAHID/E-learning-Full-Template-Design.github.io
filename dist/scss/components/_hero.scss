@@ -3,50 +3,94 @@
     position: relative;
     z-index: 20;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 40px;
+    @media (min-width: 768px) {
+      & {
+        margin-top: 60px;
+        flex-direction: row;
+      }
+    }
   }
 
   .hero_text_container {
     flex: 1;
-    margin-left: 100px;
-    margin-right: 64px;
+    margin-left: 20px;
+    margin-right: 14px;
+    @media (min-width: 768px) {
+      & {
+        margin-left: 100px;
+        margin-right: 64px;
+      }
+    }
 
     h1 {
       color: $dark-text-2;
-      font-size: 40px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.25;
+      margin-bottom: 11px;
+
+      @media (min-width: 768px) {
+        & {
+          margin-bottom: 0;
+          font-size: 40px;
+          font-weight: 500;
+        }
+      }
 
       &:before {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iNzUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTg1LjQ0OSAxMS4yOTFhMi42MTQgMi42MTQgMCAwIDAtMS43Ni00LjkyMmwxLjc2IDQuOTIyWk0yLjYzNSA3MC41MzFhMi42MTQgMi42MTQgMCAxIDAgNC42IDIuNDgybC00LjYtMi40ODJaTTgzLjY4OCA2LjM2OUM1MC42OCAxOC4xNzQgMjEuNTM2IDM1LjUxIDIuNjM1IDcwLjUzMWw0LjYgMi40ODJjMTguMDU1LTMzLjQ1MiA0NS44Ni01MC4xNTEgNzguMjE0LTYxLjcyMmwtMS43Ni00LjkyMloiIGZpbGw9IiM1MkQ1REYiLz48cGF0aCBkPSJNNjQuMTE4IDUuOTEyYTIuNjE0IDIuNjE0IDAgMCAwLTEuOTU1LTQuODQ4bDEuOTU1IDQuODQ4Wk0xLjA0MSA1MC4wNzlhMi42MTQgMi42MTQgMCAxIDAgNC4zMzggMi45MTdMMS4wNCA1MC4wNzlaTTYyLjE2MyAxLjA2NEMzOC4wNjggMTAuNzgxIDE4LjQyMyAyNC4yMyAxLjA0MSA1MC4wOGw0LjMzOCAyLjkxN2MxNi43MDktMjQuODUgMzUuNDU0LTM3LjY5NCA1OC43NC00Ny4wODRsLTEuOTU2LTQuODQ4WiIgZmlsbD0iIzFBMjQzMiIvPjwvc3ZnPg==);
-        background-repeat: no-repeat;
-        background-size: contain;
-        content: "";
-        height: 68px;
-        left: 60px;
-        position: absolute;
-        width: 82px;
-        top: 70px;
+        display: none;
       }
     }
 
     p {
       color: $dark-text-2;
-      font-size: 32px;
+      font-size: 22px;
       font-weight: 400;
       line-height: 1.25;
-      margin-bottom: 32px;
+      margin-bottom: 30px;
+      @media (min-width: 768px) {
+        & {
+          font-size: 32px;
+          margin-bottom: 32px;
+
+        }
+      }
     }
   }
 
   .hero_img_container {
     flex: 1;
-    margin-right: 64px;
+    display: block;
+    margin-left: 20px;
+    margin-right: 14px;
+
+    picture {
+      width: 91%;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+
+      @media (min-width: 768px) {
+        & {
+          width: 100%;
+          margin: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    @media (min-width: 768px) {
+      & {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
   }
 
   .hero_search_container {
-    display: flex;
     width: 100%;
 
     .hero_search-input {

@@ -4,7 +4,13 @@
     background: none;
     .section_header{
       background: $primary-color;
-      padding: 2rem;
+      padding-top: 2px !important;
+
+      @media (min-width: 768px) {
+        & {
+          padding: 2rem;
+        }
+      }
     }
   }
 }
